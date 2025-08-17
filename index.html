@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-text">know today weather</div>
+    
+    <div class="container">
+        <div class="weather-card">
+            <h1 class="title">Weather Checker</h1>
+            
+            <div class="input-section">
+                <input type="text" id="cityInput" placeholder="Enter city name..." class="city-input">
+                <button id="checkWeatherBtn" class="weather-btn">
+                    <span>Check Weather</span>
+                    <div class="btn-animation"></div>
+                </button>
+            </div>
+            
+            <div id="weatherResult" class="weather-result hidden">
+                <div class="weather-info">
+                    <h2 id="cityName" class="city-name"></h2>
+                    <div class="temperature-section">
+                        <span id="temperature" class="temperature"></span>
+                        <span id="weatherIcon" class="weather-icon"></span>
+                    </div>
+                    <p id="weatherDescription" class="weather-description"></p>
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Feels like</span>
+                            <span id="feelsLike" class="detail-value"></span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Humidity</span>
+                            <span id="humidity" class="detail-value"></span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Wind Speed</span>
+                            <span id="windSpeed" class="detail-value"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="loadingSpinner" class="loading-spinner hidden">
+                <div class="spinner"></div>
+                <p>Getting weather data...</p>
+            </div>
+            
+            <div id="errorMessage" class="error-message hidden">
+                <p>City not found. Please try again!</p>
+            </div>
+        </div>
+        
+        <!-- Weather Animations -->
+        <div id="weatherAnimations" class="weather-animations">
+            <!-- Sunny Animation -->
+            <div class="sun hidden">
+                <div class="sun-rays"></div>
+            </div>
+            
+            <!-- Rainy Animation -->
+            <div class="rain hidden">
+                <div class="raindrop"></div>
+                <div class="raindrop"></div>
+                <div class="raindrop"></div>
+                <div class="raindrop"></div>
+                <div class="raindrop"></div>
+                <div class="raindrop"></div>
+                <div class="raindrop"></div>
+                <div class="raindrop"></div>
+            </div>
+            
+            <!-- Cloudy Animation -->
+            <div class="clouds hidden">
+                <div class="cloud cloud1"></div>
+                <div class="cloud cloud2"></div>
+                <div class="cloud cloud3"></div>
+            </div>
+            
+            <!-- Snow Animation -->
+            <div class="snow hidden">
+                <div class="snowflake">❄</div>
+                <div class="snowflake">❅</div>
+                <div class="snowflake">❆</div>
+                <div class="snowflake">❄</div>
+                <div class="snowflake">❅</div>
+                <div class="snowflake">❆</div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
